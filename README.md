@@ -114,7 +114,7 @@ This schedule will be used to keep track of your progress throughout the week an
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
-![alt text]
+![alt text]https://github.com/Deleon06/Hot_Burger_Summer/blob/main/Priority%20Matrix%20Template.xlsx%20-%20Task%20Priority%20Matrix.pdf
 ## Timeframes
 
 Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
