@@ -80,8 +80,7 @@ https://developer.edamam.com/edamam-docs-recipe-api
 
 ## Wireframes
 
-***Missing***
-https://drive.google.com/file/d/1ofk3kEQTPtDr5L9SadRxv3i7XedU14WS/view?usp=sharing
+https://github.com/Deleon06/Hot_Burger_Summer/blob/main/Hot%20Burger%20Summer%20WireFrame.png
 
 ### MVP/PostMVP
 
