@@ -79,7 +79,8 @@ https://developer.edamam.com/edamam-docs-recipe-api
 
 
 ## Wireframes
-***Missing
+
+***Missing***
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 ### MVP/PostMVP
@@ -114,7 +115,7 @@ This schedule will be used to keep track of your progress throughout the week an
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
-
+***Missing***
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
 ## Timeframes
