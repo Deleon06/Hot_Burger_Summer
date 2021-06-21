@@ -79,7 +79,7 @@ https://developer.edamam.com/edamam-docs-recipe-api
 
 
 ## Wireframes
-
+***Missing
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 ### MVP/PostMVP
@@ -103,7 +103,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
