@@ -106,7 +106,7 @@ This schedule will be used to keep track of your progress throughout the week an
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
 |June 23| Pseudocode / actual code | Incomplete
 |June 24| Initial Clickable Model  | Incomplete
@@ -114,7 +114,7 @@ This schedule will be used to keep track of your progress throughout the week an
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
-![alt text]https://github.com/Deleon06/Hot_Burger_Summer/blob/main/Priority%20Matrix%20Template.xlsx%20-%20Task%20Priority%20Matrix.pdf
+![alt text]https://github.com/Deleon06/Hot_Burger_Summer/blob/main/Priority%20Matrix.png
 ## Timeframes
 
 Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
