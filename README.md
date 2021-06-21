@@ -129,7 +129,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Adding Form | H | 10hrs| N/A | N/A |
 | Working with API | H | 6hrs| N/A | N/A |
 | CSS Styling | M | 10hrs| N/A | N/A | 
-| JavaScript Functions| H 8hrs| N/A | N/A |
+| JavaScript Functions| H | 8hrs| N/A | N/A |
 | Research Local Storage | L | 3hrs | N/A | N/A |
 | Implementing Local Storage | L | 3hrs | N/A | N/A |
 | Total | H | 40hrs| N/A | N/A |
