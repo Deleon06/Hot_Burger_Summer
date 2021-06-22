@@ -2,7 +2,7 @@
 
 ## Hot_Burger_Summer
 
-The name of your project with deployed URL.
+[deployable URL]
 
 ## Project Description
 
@@ -112,23 +112,25 @@ https://developer.edamam.com/edamam-docs-recipe-api
 ![alt text](https://github.com/Deleon06/Hot_Burger_Summer/blob/main/Priority%20Matrix.png)
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 10hrs| N/A | N/A |
-| Working with API | H | 6hrs| N/A | N/A |
-| CSS Styling | M | 10hrs| N/A | N/A | 
-| JavaScript Functions| H | 8hrs| N/A | N/A |
+| Basic HTML Structure | H | 2hrs| N/A | N/A |
+| Basic API Request| H | 3hrs| N/A | N/A |
+| More HTML Structure for Rendering Data | H | 2hrs| N/A | N/A |
+| Javascript Button functionality| H | 1hrs | N/A | N/A |
+| Getting Random Data from API| H | 2hrs | N/A | N/A |
+| CSS Styling for Main Page| M | 6hrs| N/A | N/A | 
+| Getting Specific Data from API| M | 4hrs | N/A | N/A |
+| Media Query| H | 4hrs | N/A | N/A | 
+| Building Favorites Funtions| 3hrs | N/A | N/A | 
+| HTML Structure for additional Pages| L | 2hrs | N/A | N/A| 
+| CSS Styling for Additional Pages| L | 3hrs| N/A | N/A |
+| Javascript for Deleting Data| M | 2hrs | N/A | N/A |
 | Research Local Storage | L | 3hrs | N/A | N/A |
 | Implementing Local Storage | L | 3hrs | N/A | N/A |
 | Total | H | 40hrs| N/A | N/A |
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
 function reverse(string) {
@@ -137,4 +139,4 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ 
