@@ -84,13 +84,11 @@ https://developer.edamam.com/edamam-docs-recipe-api
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP. 
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Find and use external api 
 - Render data on page 
+- Allow user to get random burger on click
 - Allow user to click to see or hide nutrition data
 
 #### PostMVP  
@@ -100,9 +98,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Allow the user to create a favorite list to revisit by using local storage to save burger info.
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
 
 |  Day | Deliverable | Status
 |---|---| ---|
