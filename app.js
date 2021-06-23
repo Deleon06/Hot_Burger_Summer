@@ -37,8 +37,8 @@ const getRandomData = async () => {
 }
 const showBurgerData = (burger) => {
   
-  let burgerName = `<h1>${burger.recipe.label}</h1>`
-  let burgerImage = `<img src ="${burger.recipe.image}" style="height: 300px; width: 300px">`
+  let burgerName = `<h4>${burger.recipe.label}</h4>`
+  let burgerImage = `<img src ="${burger.recipe.image}" style="height: 20%; width: 20%">`
   let burgerRecipe = burger.recipe.ingredientLines
 
   burgerNameDiv.insertAdjacentHTML('afterbegin', burgerName)

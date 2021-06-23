@@ -1,0 +1,102 @@
+body, html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  background-image: Url("https://media.istockphoto.com/vectors/beach-bbq-vector-id165965223?k=6&m=165965223&s=612x612&w=0&h=4Ci4x5_spaV9UU-m6DRb0IZdzKJKTTyHybIOlQIbIAU=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+h1{
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  -webkit-text-stroke: .1px wheat;
+  font-family: 'Lobster', cursive;
+  color:orangered;
+  text-decoration: wheat underline;
+  
+}
+
+h3 {
+  display: flex;
+  flex-direction: row-reverse;
+  -webkit-text-stroke: .01px wheat;
+  font-family: 'Lobster', cursive;
+  color: orangered;
+  text-decoration: wheat underline;
+  padding: 0;
+}
+
+h4{
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  font-family: 'Lobster', cursive;
+}
+
+ul {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+}
+
+#try-burger-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#try-burger {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+#get-burger {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+
+
+#random-burger{
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+#burgerimg-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+}
+
+
+#recipe {
+  list-style: none;
+  font-size: .75em;
+}
+
+@media only screen and (min-width: 650px){
+  
+}
