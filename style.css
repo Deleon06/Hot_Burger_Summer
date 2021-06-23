@@ -8,7 +8,7 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: absolute;
+  overflow-y: hidden;
 }
 
 h1{
@@ -21,7 +21,6 @@ h1{
   font-family: 'Lobster', cursive;
   color:orangered;
   text-decoration: wheat underline;
-  
 }
 
 h3 {
@@ -29,18 +28,22 @@ h3 {
   flex-direction: row-reverse;
   -webkit-text-stroke: .01px wheat;
   font-family: 'Lobster', cursive;
-  color: orangered;
+  color: white;
   text-decoration: wheat underline;
-  padding: 0;
+  margin-right: 20px;
+  margin-bottom: 5px;
 }
 
 h4{
+  text-shadow: black;
   display: flex;
   flex-direction: row-reverse;
   align-content: center;
   align-self: center;
   justify-content: center;
   font-family: 'Lobster', cursive;
+  color: orangered;
+  -webkit-text-stroke: .1px wheat;
 }
 
 ul {
@@ -49,6 +52,10 @@ ul {
   align-content: center;
   align-self: center;
   justify-content: center;
+  color: orangered;
+  font-family: 'Lobster', cursive;
+  margin-right: 30px;
+  -webkit-text-stroke: .1px wheat;
 }
 
 li {
@@ -57,6 +64,13 @@ li {
   align-content: center;
   align-self: center;
   justify-content: center;
+  color: white;
+  font-family: 'Lobster', cursive;
+  border: orangered;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15)
+  )
 }
 
 #try-burger-form {
@@ -68,11 +82,17 @@ li {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
+  width: 30%;
+  border-color: orangered;
+  font-family: 'Lobster', cursive;
 }
 #get-burger {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
+  background-color: white;
+  border-color: orangered;
+  font-family: 'Lobster';
 }
 
 
@@ -81,6 +101,9 @@ li {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
+  background-color: white;
+  border-color: orangered;
+  font-family: 'Lobster';
 }
 
 #burgerimg-container {
@@ -91,6 +114,10 @@ li {
   justify-content: center;
 }
 
+img {
+  border-radius: 70%;
+}
+
 
 #recipe {
   list-style: none;
@@ -98,5 +125,7 @@ li {
 }
 
 @media only screen and (min-width: 650px){
-  
+  #recipe {
+    font-size: 1.25em;
+  }
 }
