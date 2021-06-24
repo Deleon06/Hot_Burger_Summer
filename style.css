@@ -13,6 +13,7 @@ body, html {
 
 h1{
   display: flex;
+  order: -1;
   flex-direction: row-reverse;
   align-content: center;
   align-self: center;
@@ -128,6 +129,16 @@ img {
   list-style: none;
 }
 
+#favorites-container {
+  display: flex;
+  flex-direction: column;
+  order: 0;
+  font-family: 'Staatliches', cursive;
+  border: dotted black 1px;
+  height: 20%;
+  width: 15%;
+  float: left;
+}
 @media only screen and (min-width: 650px){
   h1{
     font-size: 3pc;
@@ -146,5 +157,11 @@ img {
     font-size: 2pc;
   }
 
+  #favorites-container {
+    font-family: 'Staatliches', cursive;
+    border: dotted black 1px;
+    height: 20%;
+    width: 15%;
+  }
   
 }
