@@ -18,7 +18,7 @@ h1{
   align-self: center;
   justify-content: center;
   -webkit-text-stroke: .1px wheat;
-  font-family: 'Lobster', cursive;
+  font-family: 'Staatliches', cursive;
   color:orangered;
   text-decoration: wheat underline;
 }
@@ -27,7 +27,7 @@ h3 {
   display: flex;
   flex-direction: row-reverse;
   -webkit-text-stroke: .01px wheat;
-  font-family: 'Lobster', cursive;
+  font-family: 'Staatliches', cursive;
   color: white;
   text-decoration: wheat underline;
   margin-right: 20px;
@@ -35,14 +35,16 @@ h3 {
 }
 
 h4{
+  font-size: 20px;
   text-shadow: black;
   display: flex;
   flex-direction: row-reverse;
   align-content: center;
   align-self: center;
   justify-content: center;
-  font-family: 'Lobster', cursive;
+  font-family: 'Staatliches', cursive;
   color: orangered;
+  text-decoration: wheat underline;
   -webkit-text-stroke: .1px wheat;
 }
 
@@ -52,10 +54,11 @@ ul {
   align-content: center;
   align-self: center;
   justify-content: center;
-  color: orangered;
-  font-family: 'Lobster', cursive;
+  color: white;
+  font-family: 'Staatliches', cursive;
   margin-right: 30px;
   -webkit-text-stroke: .1px wheat;
+  text-decoration: wheat underline;
 }
 
 li {
@@ -64,9 +67,11 @@ li {
   align-content: center;
   align-self: center;
   justify-content: center;
+  text-align: center;
   color: white;
-  font-family: 'Lobster', cursive;
+  font-family: 'Staatliches', cursive;
   border: orangered;
+  -webkit-text-stroke: .1px wheat;
   background: linear-gradient(
     rgba(0, 0, 0, 0.15),
     rgba(0, 0, 0, 0.15)
@@ -121,11 +126,25 @@ img {
 
 #recipe {
   list-style: none;
-  font-size: .75em;
 }
 
 @media only screen and (min-width: 650px){
-  #recipe {
-    font-size: 1.25em;
+  h1{
+    font-size: 3pc;
   }
+  ul{
+    font-size: 2pc;
+  }
+  li{
+    font-size: 2pc;
+  }
+
+  h3{
+    font-size: 2pc;
+  }
+  h4 {
+    font-size: 2pc;
+  }
+
+  
 }
