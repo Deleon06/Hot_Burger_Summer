@@ -10,6 +10,11 @@ const burgerContainer = document.querySelector("#burger-container")
 const randomButton = document.querySelector("#random-burger")
 const h2 = document.querySelector("#h2-div")
 const welcomeName = `<h2> Welcome ${localStorage.getItem('name')}!</h2>`
+const favorites = document.querySelector("#favorites")
+const firstFavorite = document.querySelector("#first-favorite")
+const secondFavorite = document.querySelector("#second-favorite")
+const thirdFavorite = document.querySelector("#third-favorite")
+const favoriteButton = document.querySelector("#add-to-favorites")
 
 h2.insertAdjacentHTML('afterbegin', welcomeName)
 
@@ -20,6 +25,10 @@ const getData = async (input)=> {
     console.log(response)
     let displayedBurger = response.data.hits[0]
     showBurgerData(displayedBurger)
+    favoriteButton.style.display = "block"
+    favoriteButton.addEventListener('click', () => {
+      localStorage.setItem("first-favorite", displayBurger.recipe.label)
+    })
     return response
   }
   catch (error) {
@@ -34,6 +43,11 @@ const getRandomData = async () => {
     let randomBurger = response.data.hits[randomNumber]
     console.log(randomBurger)
     showBurgerData(randomBurger)
+    favoriteButton.style.display = "block"
+    favoriteButton.addEventListener('click', () => {
+      localStorage.setItem("first-favorite", [randomBurger.recipe.label])
+      firstFavorite.append(localStorage.getItem("first-favorite"))
+      })
     return response
   } catch(error) {
     console.error(error)
@@ -59,6 +73,7 @@ const showBurgerData = (burger) => {
     let newLi = document.createElement('li')
     recipeDiv.append(newLi)
     newLi.append(element)
+      
   })
 }
 
@@ -86,6 +101,22 @@ let clearForm = (remove) => {
   }
 }
 
+
+favorites.addEventListener('click', () => {
+  
+})
+
+favorites.addEventListener('click', () => {
+  
+})
+
+favorites.addEventListener('click', () => {
+  
+})
+
+favorites.addEventListener('click', () => {
+  
+})
 
 
 
