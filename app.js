@@ -18,6 +18,8 @@ const favoriteButton = document.querySelector("#add-to-favorites")
 
 h2.insertAdjacentHTML('afterbegin', welcomeName)
 
+let favoriteList = []
+
 const getData = async (input)=> {
 
   try {
@@ -27,7 +29,10 @@ const getData = async (input)=> {
     showBurgerData(displayedBurger)
     favoriteButton.style.display = "block"
     favoriteButton.addEventListener('click', () => {
-      localStorage.setItem("first-favorite", displayBurger.recipe.label)
+      favoriteList.push(displayedBurger.recipe.label)
+      localStorage.removeItem("first-favorite")
+      localStorage.setItem("first-favorite", JSON.stringify(favoriteList))
+      console.log(favoriteList)
     })
     return response
   }
@@ -45,7 +50,11 @@ const getRandomData = async () => {
     showBurgerData(randomBurger)
     favoriteButton.style.display = "block"
     favoriteButton.addEventListener('click', () => {
-      localStorage.setItem("first-favorite", [randomBurger.recipe.label])
+      favoriteList.push(randomBurger.recipe.label)
+      localStorage.removeItem("first-favorite")
+      localStorage.setItem("first-favorite", JSON.stringify(favoriteList))
+      console.log(favoriteList)
+      
       firstFavorite.append(localStorage.getItem("first-favorite"))
       })
     return response
