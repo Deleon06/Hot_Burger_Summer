@@ -23,6 +23,14 @@ h1{
   text-decoration: wheat underline;
 }
 
+h2 {
+  margin: 0;
+  font-family: 'Staatliches', cursive;
+  color: orangered;
+  text-decoration: wheat underline;
+  -webkit-text-stroke: .1px wheat;
+}
+
 h3 {
   display: flex;
   flex-direction: row-reverse;
@@ -30,15 +38,12 @@ h3 {
   font-family: 'Staatliches', cursive;
   color: white;
   text-decoration: wheat underline;
-  margin-right: 20px;
-  margin-bottom: 5px;
+  margin: 0px 20px 5px 0px;
 }
 
 h4{
-  font-size: 20px;
-  text-shadow: black;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-content: center;
   align-self: center;
   justify-content: center;
@@ -49,15 +54,16 @@ h4{
 }
 
 ul {
+  margin: 0;
+  padding: 5px;
   display: flex;
   flex-direction: row-reverse;
   align-content: center;
   align-self: center;
   justify-content: center;
-  color: white;
+  color: orangered;
   font-family: 'Staatliches', cursive;
-  margin-right: 30px;
-  -webkit-text-stroke: .1px wheat;
+  -webkit-text-stroke: .2px wheat;
   text-decoration: wheat underline;
 }
 
@@ -78,34 +84,31 @@ li {
   )
 }
 
-#try-burger-form {
-  display: flex;
-  flex-direction: column;
-}
-
-#try-burger {
+#form-wrapper {
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
-  width: 30%;
+  justify-content: space-between;
+}
+#try-burger-form {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+#try-burger {
   border-color: orangered;
   font-family: 'Lobster', cursive;
 }
 #get-burger {
   display: flex;
-  flex-direction: row;
-  align-self: flex-end;
+  margin-left: auto;
   background-color: white;
   border-color: orangered;
   font-family: 'Lobster';
 }
 
-
-
 #random-burger{
   display: flex;
-  flex-direction: row;
-  align-self: flex-end;
+  margin-left: auto;
   background-color: white;
   border-color: orangered;
   font-family: 'Lobster';
@@ -134,8 +137,8 @@ img {
   order: 0;
   font-family: 'Staatliches', cursive;
   border: dotted black 1px;
-  height: 20%;
-  width: 15%;
+  height: 25%;
+  width: 20%;
   float: left;
 }
 #enter-name{

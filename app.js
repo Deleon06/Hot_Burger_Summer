@@ -8,12 +8,10 @@ const burgerNameDiv = document.querySelector("#burger-name")
 const recipeDiv = document.querySelector("#recipe")
 const burgerContainer = document.querySelector("#burger-container")
 const randomButton = document.querySelector("#random-burger")
-const nameForm = document.querySelector("#name-form")
-const inputName = document.querySelector("#name")
-const h4 = document.querySelector("#h4-div")
-const welcomeName = `<h4> Welcome ${localStorage.getItem('name')}!</h4>`
+const h2 = document.querySelector("#h2-div")
+const welcomeName = `<h2> Welcome ${localStorage.getItem('name')}!</h2>`
 
-h4.insertAdjacentHTML('afterbegin', welcomeName)
+h2.insertAdjacentHTML('afterbegin', welcomeName)
 
 const getData = async (input)=> {
 
@@ -62,9 +60,7 @@ const showBurgerData = (burger) => {
     recipeDiv.append(newLi)
     newLi.append(element)
   })
-
 }
-
 
 burgerForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -90,16 +86,6 @@ let clearForm = (remove) => {
   }
 }
 
-nameForm.addEventListener('submit', () => {
-  localStorage.setItem('name', inputName.value)
-})
 
 
-
-
-
-// nameForm.addEventListener('submit', (e) => {
-//   console.log(inputName.value)
-//   localStorage.removeItem('name', inputName.value)
-// })
 
