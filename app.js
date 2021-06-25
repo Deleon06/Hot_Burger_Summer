@@ -10,7 +10,10 @@ const burgerContainer = document.querySelector("#burger-container")
 const randomButton = document.querySelector("#random-burger")
 const nameForm = document.querySelector("#name-form")
 const inputName = document.querySelector("#name")
-const h2 = document.querySelector("h2")
+const h4 = document.querySelector("#h4-div")
+const welcomeName = `<h4> Welcome ${localStorage.getItem('name')}!</h4>`
+
+h4.insertAdjacentHTML('afterbegin', welcomeName)
 
 const getData = async (input)=> {
 
@@ -63,23 +66,23 @@ const showBurgerData = (burger) => {
 }
 
 
-// burgerForm.addEventListener('submit', (e) => {
-//   e.preventDefault()
-//   clearForm(imageDiv)
-//   clearForm(recipeDiv)
-//   clearForm(burgerNameDiv)
-//   const userText = document.querySelector('#try-burger').value
-//   getData(userText)
-//   document.querySelector('#try-burger').value = ""
-// })
+burgerForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  clearForm(imageDiv)
+  clearForm(recipeDiv)
+  clearForm(burgerNameDiv)
+  const userText = document.querySelector('#try-burger').value
+  getData(userText)
+  document.querySelector('#try-burger').value = ""
+})
 
-// randomButton.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   clearForm(imageDiv)
-//   clearForm(recipeDiv)
-//   clearForm(burgerNameDiv)
-//   getRandomData()
-// })
+randomButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  clearForm(imageDiv)
+  clearForm(recipeDiv)
+  clearForm(burgerNameDiv)
+  getRandomData()
+})
 
 let clearForm = (remove) => {
   while (remove.lastChild) {
@@ -87,14 +90,12 @@ let clearForm = (remove) => {
   }
 }
 
-
-
-
 nameForm.addEventListener('submit', () => {
   localStorage.setItem('name', inputName.value)
-  const welcomeName = localStorage.getItem('name')
-  console.log(welcomeName)
 })
+
+
+
 
 
 // nameForm.addEventListener('submit', (e) => {
