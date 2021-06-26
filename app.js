@@ -16,9 +16,9 @@ const secondFavorite = document.querySelector("#second-favorite")
 const thirdFavorite = document.querySelector("#third-favorite")
 const favoriteButton = document.querySelector("#add-to-favorites")
 
-h2.insertAdjacentHTML('afterbegin', welcomeName)
-
 let favoriteList = []
+
+h2.insertAdjacentHTML('afterbegin', welcomeName)
 
 const getData = async (input)=> {
 
@@ -28,12 +28,7 @@ const getData = async (input)=> {
     let displayedBurger = response.data.hits[0]
     showBurgerData(displayedBurger)
     favoriteButton.style.display = "block"
-    favoriteButton.addEventListener('click', () => {
-      favoriteList.push(displayedBurger.recipe.label)
-      localStorage.removeItem("first-favorite")
-      localStorage.setItem("first-favorite", JSON.stringify(favoriteList))
-      console.log(favoriteList)
-    })
+    favoriteButtonPush(displayedBurger.recipe.label)
     return response
   }
   catch (error) {
@@ -41,22 +36,16 @@ const getData = async (input)=> {
   }
 }
 
+
+
 const getRandomData = async () => {
   try {
     const response = await axios.get(`${DOMAIN}api/recipes/v2?type=public&q=burger&app_id=${app_id}&app_key=${API_KEY}&dishType=Sandwiches`)
     let randomNumber = Math.floor(Math.random() * response.data.hits.length)
     let randomBurger = response.data.hits[randomNumber]
-    console.log(randomBurger)
     showBurgerData(randomBurger)
     favoriteButton.style.display = "block"
-    favoriteButton.addEventListener('click', () => {
-      favoriteList.push(randomBurger.recipe.label)
-      localStorage.removeItem("first-favorite")
-      localStorage.setItem("first-favorite", JSON.stringify(favoriteList))
-      console.log(favoriteList)
-      
-      firstFavorite.append(localStorage.getItem("first-favorite"))
-      })
+    favoriteButtonPush(randomBurger.recipe.label)
     return response
   } catch(error) {
     console.error(error)
@@ -71,6 +60,8 @@ const showBurgerData = (burger) => {
   burgerNameDiv.insertAdjacentHTML('afterbegin', burgerName)
   imageDiv.insertAdjacentHTML('afterbegin', burgerImage)
 
+  
+
   let newRecipeDiv = document.createElement('div')
   newRecipeDiv.id = "recipe"
   burgerContainer.append(newRecipeDiv)
@@ -81,8 +72,7 @@ const showBurgerData = (burger) => {
   burgerRecipe.forEach(element => {
     let newLi = document.createElement('li')
     recipeDiv.append(newLi)
-    newLi.append(element)
-      
+    newLi.append(element)  
   })
 }
 
@@ -104,28 +94,49 @@ randomButton.addEventListener('click', (e) => {
   getRandomData()
 })
 
+
+
+// const favoriteButtonPush = (burger) => favoriteButton.addEventListener('click', (e) => {
+//   e.preventDefault()
+//   console.log(favoriteList)
+//   console.log(burger)
+//   favoriteList.push(burger)
+//   localStorage.setItem("first-favorite", favoriteList[favoriteList.length - 1])
+//   console.log(favoriteList[favoriteList.length - 1])
+//   firstFavorite.append(localStorage.getItem("first-favorite"))
+//   })
+
 let clearForm = (remove) => {
   while (remove.lastChild) {
     remove.removeChild(remove.lastChild)
   }
 }
 
-
-favorites.addEventListener('click', () => {
+// const favoriteButtonCount = () => {
+//   let count = 0
+//   favoriteButton.onClick = () => {
+//     count += 1
+//     return count
+//   }
+//   console.log(count)
+// }
   
-})
-
-favorites.addEventListener('click', () => {
+// favoriteButtonCount ()
+// favorites.addEventListener('click', () => {
   
-})
+// })
 
-favorites.addEventListener('click', () => {
+// favorites.addEventListener('click', () => {
   
-})
+// })
 
-favorites.addEventListener('click', () => {
+// favorites.addEventListener('click', () => {
   
-})
+// })
+
+// favorites.addEventListener('click', () => {
+  
+// })
 
 
 

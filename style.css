@@ -126,7 +126,7 @@ img {
   justify-content: center;
 }
 
-#add-to-favorites{
+/* #add-to-favorites{
   display: flex;
   justify-content: center;
   background-color: white;
@@ -134,13 +134,13 @@ img {
   font-family: 'Lobster';
   height: 25%;
   margin: auto;
-}
+} */
 
 #recipe {
   list-style: none;
 }
 
-#favorites-container {
+/* #favorites-container {
   display: flex;
   flex-direction: column;
   order: 0;
@@ -148,7 +148,7 @@ img {
   border: ridge wheat 3px;
   height: 25%;
   width: auto;
-}
+} */
 #enter-name{
   padding-right: 5px;
 }
@@ -156,10 +156,10 @@ img {
   display: flex;
   justify-content: center;
 }
-#favorites {
+/* #favorites {
   text-decoration: underline;
   font-size: 1.5pc
-}
+} */
 a:link {
   color: wheat;
   text-decoration: none;
@@ -200,13 +200,13 @@ a:hover{
     font-size: 2pc;
   }
 
-  #favorites {
+  /* #favorites {
     font-size: 2.25pc
   }
   #favorites-container {
     font-family: 'Staatliches', cursive;
     border: dotted black 1px;
     height: 20%;
-  }
+  } */
   
 }
