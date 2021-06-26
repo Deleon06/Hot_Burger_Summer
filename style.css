@@ -88,6 +88,8 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* to adjust for only mvp */
+  flex-direction: row-reverse;
 }
 #try-burger-form {
   flex-direction: column;
