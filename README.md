@@ -8,9 +8,6 @@
 
 Step up your burger game by browsing through new bugers with recepies and images.  Find one that catches your eyes and start grilling! 
 
-***Health Conscious?***
-Just press the nutrition button at your own risk! Or try one of the impossible burger recipes!
-
 Click here to start![Deployable URL]
 
 ## API and Data Sample
@@ -89,11 +86,11 @@ https://developer.edamam.com/edamam-docs-recipe-api
 - Find and use external api 
 - Render data on page 
 - Allow user to get random burger on click
-- Allow user to click to see or hide nutrition data
 
 #### PostMVP  
 
 - Allow user to create a list of future burgers to try.
+- Allow user to click to see or hide nutrition data
 - Allow the user either delete the burger selection if they no longer want to try to cook it or if they didn't like it after they cooked it.
 - Allow the user to create a favorite list to revisit by using local storage to save burger info.
 
@@ -110,69 +107,54 @@ https://developer.edamam.com/edamam-docs-recipe-api
 
 ## Priority Matrix
 ![alt text](https://github.com/Deleon06/Hot_Burger_Summer/blob/main/Priority%20Matrix.png)
+
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML Structure | H | 2hrs| N/A | N/A |
+| Basic HTML Structure | H | 1hrs| N/A | N/A |
 | Basic API Request| H | 3hrs| N/A | N/A |
-| More HTML Structure for Rendering Data | H | 2hrs| N/A | N/A |
+| More HTML Structure for Rendering Data | H | 1hrs| N/A | N/A |
 | Javascript Button functionality| H | 1hrs | N/A | N/A |
 | Getting Random Data from API| H | 2hrs | N/A | N/A |
-| CSS Styling for Main Page| M | 6hrs| N/A | N/A | 
+| CSS Styling for Main Page| M | 8hrs| N/A | N/A | 
 | Getting Specific Data from API| M | 4hrs | N/A | N/A |
 | Media Query| H | 4hrs | N/A | N/A | 
 | Building Favorites Functions| H | 3hrs | N/A | N/A | 
 | HTML Structure for additional Pages| L | 2hrs | N/A | N/A| 
 | CSS Styling for Additional Pages| L | 3hrs| N/A | N/A |
+| Implementing Local Storage | L | 2hrs | N/A | N/A |
 | Javascript for Deleting Data| M | 2hrs | N/A | N/A |
-| Research Local Storage | L | 3hrs | N/A | N/A |
-| Implementing Local Storage | L | 3hrs | N/A | N/A |
-| Total | H | 40hrs| N/A | N/A |
+| Adding more Local Storage | L | 2hrs | N/A | N/A |
+| Building Favorites Functions| H | 5hrs | N/A | N/A | 
+| Total | H | 43hrs| N/A | N/A |
 
 ## Code Snippet
 
 ```
-const getRandomData = async () => {
-  try {
-    const response = await axios.get(`${DOMAIN}api/recipes/v2?type=public&q=burger&app_id=${app_id}&app_key=${API_KEY}&dishType=Sandwiches`)
-    let randomNumber = Math.floor(Math.random() * response.data.hits.length)
-    let randomBurger = response.data.hits[randomNumber]
-    console.log(randomBurger)
-    showBurgerData(randomBurger)
-    favoriteButton.style.display = "block"
-    favoriteButton.addEventListener('click', () => {
-      localStorage.setItem("first-favorite", [randomBurger.recipe.label])
-      firstFavorite.append(localStorage.getItem("first-favorite"))
-      })
-    return response
-  } catch(error) {
-    console.error(error)
-  }
-}
-const showBurgerData = (burger) => {
-  
-  let burgerName = `<h4>${burger.recipe.label}</h4>`
-  let burgerImage = `<img src ="${burger.recipe.image}" style="height: 20%; width: 20%">`
-  let burgerRecipe = burger.recipe.ingredientLines
-
-  burgerNameDiv.insertAdjacentHTML('afterbegin', burgerName)
-  imageDiv.insertAdjacentHTML('afterbegin', burgerImage)
-
-  let newRecipeDiv = document.createElement('div')
-  newRecipeDiv.id = "recipe"
-  burgerContainer.append(newRecipeDiv)
+favoriteButton.addEventListener('click', () => {
+  clearForm(firstFavorite);
+  let label = document.querySelector("h4").innerHTML
+  favoriteList.push(label);
+  alert(`${label} has been added to favorites!`)
+  localStorage.setItem("first-favorite", JSON.stringify(favoriteList));
   let newUl = document.createElement('ul')
-  recipeDiv.append(newUl)
-  newUl.textContent = "Recipe: "
+  newUl.id = "favorite-ul"
+  firstFavorite.append(newUl)
+  let count = 0
 
-  burgerRecipe.forEach(element => {
+  favoriteList.forEach(element => {
+    count += 1
     let newLi = document.createElement('li')
-    recipeDiv.append(newLi)
-    newLi.append(element)
-      
-  })
-}
+    newUl.append(newLi)
+    newLi.id = "favorite-id"
+    newLi.style.display = "block"
+    newLi.append(element);
+    if (count > 3) {
+      newLi.style.display = "none"
+      }
+    })
+  });
 ```
 
 ## Change Log
