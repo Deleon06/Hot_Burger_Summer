@@ -12,8 +12,6 @@ const h2 = document.querySelector("#h2-div")
 const welcomeName = `<h2> Welcome ${localStorage.getItem('name')}!</h2>`
 const favorites = document.querySelector("#favorites")
 const firstFavorite = document.querySelector("#first-favorite")
-const secondFavorite = document.querySelector("#second-favorite")
-const thirdFavorite = document.querySelector("#third-favorite")
 const favoriteButton = document.querySelector("#add-to-favorites")
 
 let favoriteList = []
@@ -24,11 +22,9 @@ const getData = async (input)=> {
 
   try {
     const response = await axios.get(`${DOMAIN}api/recipes/v2?type=public&q=${input}&app_id=${app_id}&app_key=${API_KEY}&dishType=Sandwiches`)
-    console.log(response)
     let displayedBurger = response.data.hits[0]
     showBurgerData(displayedBurger)
     favoriteButton.style.display = "block"
-    favoriteButtonPush(displayedBurger.recipe.label)
     return response
   }
   catch (error) {
@@ -45,7 +41,6 @@ const getRandomData = async () => {
     let randomBurger = response.data.hits[randomNumber]
     showBurgerData(randomBurger)
     favoriteButton.style.display = "block"
-    favoriteButtonPush(randomBurger.recipe.label)
     return response
   } catch(error) {
     console.error(error)
@@ -87,7 +82,7 @@ burgerForm.addEventListener('submit', (e) => {
 })
 
 randomButton.addEventListener('click', (e) => {
-  e.preventDefault()
+  e.preventDefault() 
   clearForm(imageDiv)
   clearForm(recipeDiv)
   clearForm(burgerNameDiv)
@@ -96,47 +91,36 @@ randomButton.addEventListener('click', (e) => {
 
 
 
-// const favoriteButtonPush = (burger) => favoriteButton.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   console.log(favoriteList)
-//   console.log(burger)
-//   favoriteList.push(burger)
-//   localStorage.setItem("first-favorite", favoriteList[favoriteList.length - 1])
-//   console.log(favoriteList[favoriteList.length - 1])
-//   firstFavorite.append(localStorage.getItem("first-favorite"))
-//   })
+favoriteButton.addEventListener('click', () => {
+  clearForm(firstFavorite);
+  let label = document.querySelector("h4").innerHTML
+  favoriteList.push(label);
+  alert(`${label} has been added to favorites!`)
+  localStorage.setItem("first-favorite", JSON.stringify(favoriteList));
+  let newUl = document.createElement('ul')
+  newUl.id = "favorite-ul"
+  firstFavorite.append(newUl)
+  let count = 0
+  favoriteList.forEach(element => {
+    count += 1
+    let newLi = document.createElement('li')
+    newUl.append(newLi)
+    newLi.id = "favorite-id"
+    newLi.style.display = "block"
+    newLi.append(element);
+    if (count > 3) {
+      newLi.style.display = "none"
+    }
+  })
+ 
+  });
+
+
 
 let clearForm = (remove) => {
   while (remove.lastChild) {
     remove.removeChild(remove.lastChild)
   }
 }
-
-// const favoriteButtonCount = () => {
-//   let count = 0
-//   favoriteButton.onClick = () => {
-//     count += 1
-//     return count
-//   }
-//   console.log(count)
-// }
-  
-// favoriteButtonCount ()
-// favorites.addEventListener('click', () => {
-  
-// })
-
-// favorites.addEventListener('click', () => {
-  
-// })
-
-// favorites.addEventListener('click', () => {
-  
-// })
-
-// favorites.addEventListener('click', () => {
-  
-// })
-
 
 

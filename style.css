@@ -67,9 +67,20 @@ ul {
   text-decoration: wheat underline;
 }
 
+#favorite-ul {
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  color: orangered;
+  font-family: 'Staatliches', cursive;
+  -webkit-text-stroke: .2px wheat;
+  text-decoration: wheat underline;
+}
+
 li {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-content: center;
   align-self: center;
   justify-content: center;
@@ -84,15 +95,29 @@ li {
   )
 }
 
+#favorite-id {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Staatliches', cursive;
+  border: orangered;
+  -webkit-text-stroke: .1px wheat;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15)
+  )
+}
+
 #form-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* to adjust for only mvp */
-  flex-direction: row-reverse;
 }
 #try-burger-form {
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
   padding: 0;
 }
@@ -107,7 +132,24 @@ li {
   border-color: orangered;
   font-family: 'Lobster';
 }
+#more-burgers{
+  display: flex;
+  margin-left: auto;
+  background-color: white;
+  border-color: orangered;
+  font-family: 'Lobster';
+}
 
+#get-name{
+  background-color: white;
+  border-color: orangered;
+  font-family: 'Lobster';
+}
+
+#name {
+  border-color: orangered;
+  font-family: 'Lobster', cursive;
+}
 #random-burger{
   display: flex;
   margin-left: auto;
@@ -128,7 +170,7 @@ img {
   justify-content: center;
 }
 
-/* #add-to-favorites{
+#add-to-favorites{
   display: flex;
   justify-content: center;
   background-color: white;
@@ -136,33 +178,44 @@ img {
   font-family: 'Lobster';
   height: 25%;
   margin: auto;
-} */
+}
 
 #recipe {
   list-style: none;
 }
 
-/* #favorites-container {
+#favorites-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   order: 0;
   font-family: 'Staatliches', cursive;
   border: ridge wheat 3px;
   height: 25%;
   width: auto;
-} */
+}
+
+#remove-everything {
+  display: flex;
+  margin-left: auto;
+  background-color: white;
+  border-color: orangered;
+  font-family: 'Lobster';
+}
 #enter-name{
   padding-right: 5px;
 }
+
 #name-form {
   display: flex;
   justify-content: center;
 }
-/* #favorites {
+
+#favorites {
   text-decoration: underline;
   font-size: 1.5pc
-} */
-a:link {
+}
+
+a:link { 
   color: wheat;
   text-decoration: none;
 }
@@ -202,13 +255,13 @@ a:hover{
     font-size: 2pc;
   }
 
-  /* #favorites {
+  #favorites {
     font-size: 2.25pc
   }
   #favorites-container {
     font-family: 'Staatliches', cursive;
     border: dotted black 1px;
     height: 20%;
-  } */
+  }
   
 }
