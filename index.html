@@ -5,45 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <script defer src="./app.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-  <title>Hot Burger Summer</title>
+  <script defer src="./app.js"></script>
+  <title>Welcome to Hot Burger Summer!</title>
 </head>
 <body>
-  <h1>Hot Burger Summer!</h1>
-
-  <div id="h2-div">
-
+  <div>
+    <h1>Hot Burger Summer!</h1>
   </div>
-
-  <h3>Try a Burger!</h3>
-
-  <div id="form-wrapper">
-    <div id="favorites-container">
-      <form>
-        <a href="favoritepage.html"><section id="favorites">Favorites</section></a>
-        <section id="first-favorite"></section>
-      </form>
-    </div>
-    <form id="try-burger-form"> 
-      <input type="text" name="burger" placeholder="Search a Burger"id="try-burger" required> 
-      <input type="submit" id ="get-burger">
-      <button id="random-burger">Random</button>
-    </form>
-  </div>
-  
-  <div id ="burger-container">
-    <div id="burger-name">
-    </div>
-    <div id = "burgerimg-container">
-    </div>
-    <button id ="add-to-favorites" style="display: none;">Add to Favorites!</button>
-    <div id = "recipe">
-    </div>
-  </div>
-</body>
-
+  <form id="name-form" action="mainpage.html">
+    <label for="name"></label>
+    <input type="text" placeholder="Enter Name" id="name" required>
+    <input type="submit" id="get-name">
+  </form>
 </body>
 </html>
