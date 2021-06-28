@@ -32,8 +32,6 @@ const getData = async (input)=> {
   }
 }
 
-
-
 const getRandomData = async () => {
   try {
     const response = await axios.get(`${DOMAIN}api/recipes/v2?type=public&q=burger&app_id=${app_id}&app_key=${API_KEY}&dishType=Sandwiches`)
@@ -46,6 +44,7 @@ const getRandomData = async () => {
     console.error(error)
   }
 }
+
 const showBurgerData = (burger) => {
   
   let burgerName = `<h4>${burger.recipe.label}</h4>`
@@ -55,11 +54,10 @@ const showBurgerData = (burger) => {
   burgerNameDiv.insertAdjacentHTML('afterbegin', burgerName)
   imageDiv.insertAdjacentHTML('afterbegin', burgerImage)
 
-  
-
   let newRecipeDiv = document.createElement('div')
   newRecipeDiv.id = "recipe"
   burgerContainer.append(newRecipeDiv)
+
   let newUl = document.createElement('ul')
   recipeDiv.append(newUl)
   newUl.textContent = "Recipe: "
@@ -89,8 +87,6 @@ randomButton.addEventListener('click', (e) => {
   getRandomData()
 })
 
-
-
 favoriteButton.addEventListener('click', () => {
   clearForm(firstFavorite);
   let label = document.querySelector("h4").innerHTML
@@ -101,6 +97,7 @@ favoriteButton.addEventListener('click', () => {
   newUl.id = "favorite-ul"
   firstFavorite.append(newUl)
   let count = 0
+
   favoriteList.forEach(element => {
     count += 1
     let newLi = document.createElement('li')
@@ -110,12 +107,9 @@ favoriteButton.addEventListener('click', () => {
     newLi.append(element);
     if (count > 3) {
       newLi.style.display = "none"
-    }
-  })
- 
+      }
+    })
   });
-
-
 
 let clearForm = (remove) => {
   while (remove.lastChild) {
