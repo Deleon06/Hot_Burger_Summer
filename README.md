@@ -2,7 +2,7 @@
 
 ## Hot_Burger_Summer
 
-[deployable URL]
+hotburgersummer.netlify.app
 
 ## Project Description
 
