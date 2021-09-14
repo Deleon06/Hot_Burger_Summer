@@ -55,7 +55,7 @@ h4{
   align-self: center;
   justify-content: center;
   font-family: 'Staatliches', cursive;
-  color: orangered;
+  color: white;
   text-decoration: wheat underline;
   -webkit-text-stroke: .1px wheat;
 }
@@ -68,7 +68,6 @@ ul {
   color: orangered;
   font-family: 'Staatliches', cursive;
   -webkit-text-stroke: .2px wheat;
-  text-decoration: wheat underline;
 }
 
 #favorite-ul {
@@ -77,7 +76,6 @@ ul {
   color: orangered;
   font-family: 'Staatliches', cursive;
   -webkit-text-stroke: .2px wheat;
-  text-decoration: wheat underline;
 }
 
 li {
@@ -102,7 +100,7 @@ li {
   flex-direction: row;
   padding: 3px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   color: white;
   font-family: 'Staatliches', cursive;
   border: orangered;
