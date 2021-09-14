@@ -1,6 +1,6 @@
 const removeEverything = document.querySelector('#remove-everything')
 const firstFavorite = document.querySelector("#first-favorite")
-
+const favoriteList = require("./mainpage.js")
 
 console.log(localStorage.getItem('first-favorite'))
 

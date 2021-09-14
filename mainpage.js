@@ -14,7 +14,6 @@ const favorites = document.querySelector("#favorites")
 const firstFavorite = document.querySelector("#first-favorite")
 const favoriteButton = document.querySelector("#add-to-favorites")
 
-
 let favoriteList = []
 
 h2.insertAdjacentHTML('afterbegin', welcomeName)
@@ -118,4 +117,4 @@ let clearForm = (remove) => {
   }
 }
 
-
+module.exports = favoriteList

@@ -10,6 +10,13 @@ body, html {
   background-size: cover;
 }
 
+.intro_page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 h1{
   display: flex;
   order: -1;
@@ -113,7 +120,7 @@ li {
 }
 #try-burger-form {
   flex-direction: row;
-  margin: 0;
+  margin: 0px 10px 0px 0px;
   padding: 0;
 }
 #try-burger {
@@ -187,6 +194,7 @@ img {
   border: ridge wheat 3px;
   height: 25%;
   width: auto;
+  margin: 0px 0px 0px 10px;
 }
 
 #remove-everything {
@@ -206,6 +214,7 @@ img {
 }
 
 #favorites {
+  margin: 0;
   text-decoration: underline;
   font-size: 1.5pc
 }
